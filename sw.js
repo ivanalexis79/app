@@ -6,3 +6,10 @@ self.addEventListener('install', event => {
         })
     );
 });
+
+self.addEventListener('install', event => {
+    self.skipWaiting(); // Activa el nuevo Service Worker inmediatamente
+});
+self.addEventListener('activate', event => {
+    console.log("Service Worker activado");
+});
