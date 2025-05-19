@@ -1,7 +1,7 @@
 {
     "name": "Conversor de Estatura",
     "short_name": "Conversor",
-    "start_url": "/index.html",
+    "start_url": "app/index.html",
     "display": "standalone",
     "icons": [
         {
