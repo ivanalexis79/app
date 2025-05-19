@@ -1,11 +1,16 @@
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open('app-cache').then(cache => {
-            return cache.add('/app/index.html')
-            .catch(err => console.error("Error al agregar index.html al caché:", err));
+            return cache.addAll([
+                '/',
+                '/app/index.html',
+                '/app/style.css',
+                '/app/script.js'
+            ]).catch(err => console.error("Error al agregar archivos al caché:", err));
         })
     );
 });
+
 
 self.addEventListener('install', event => {
     self.skipWaiting(); // Activa el nuevo Service Worker inmediatamente
