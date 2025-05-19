@@ -3,9 +3,9 @@ self.addEventListener('install', event => {
         caches.open('app-cache').then(cache => {
             return cache.addAll([
                 '/',
-                '/index.html',
-                '/style.css',
-                '/script.js'
+                '/app/index.html',
+                '/app/style.css',
+                '/app/script.js'
             ]);
         })
     );
